@@ -16,4 +16,5 @@ before_install:
 install:
   - npm ci
 script:
+  - cd ../..
   - "./android/gradlew assembleRelease -p android/"
