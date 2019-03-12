@@ -7,8 +7,7 @@ android:
     - android-23
 before_install:
   - cd hangzhou_mandarim_app
-  - yes | sdkmanager "platforms;android-23"
-  - yes | sdkmanager "build-tools;23.0.1"
+  - yes | sdkmanager --licenses
   - nvm install && nvm use
   - npm install -g "npm@$(jq -r '.engines.npm' package.json)"
   - cd android
