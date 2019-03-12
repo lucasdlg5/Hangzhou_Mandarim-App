@@ -9,6 +9,7 @@ before_install:
   - cd hangzhou_mandarim_app
   - yes | sdkmanager "platforms;android-23"
   - yes | sdkmanager "build-tools;23.0.1"
+  - nvm install && nvm use
   - npm install -g "npm@$(jq -r '.engines.npm' package.json)"
 install:
   - npm ci
