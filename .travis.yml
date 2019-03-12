@@ -11,6 +11,7 @@ before_install:
   - yes | sdkmanager "build-tools;23.0.1"
   - nvm install && nvm use
   - npm install -g "npm@$(jq -r '.engines.npm' package.json)"
+  - chmod +x gradlew
 install:
   - npm ci
 script:
